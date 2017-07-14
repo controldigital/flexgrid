@@ -5,7 +5,7 @@ The grid is based on the Bootstrap system, but utilizes much more controls that 
 
 - Author: Control
 - Version: 0.9
-- License:  *	License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
+- License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
 
 
 ## Container
