@@ -12,7 +12,8 @@
 	max-width: 71.25em;
 	padding-left: 1em;
 	padding-right: 1em;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .container-full {
@@ -47,6 +48,11 @@
 .wrap {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+.wrap-reverse {
+	-ms-flex-wrap: wrap-reverse;
+	flex-wrap: wrap-reverse;
 }
 
 .nowrap {
@@ -155,17 +161,6 @@
 	justify-content: center;
 }
 
-.justify-between {
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-}
-
-.justify-around {
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
-}
-
 .justify-start {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
@@ -176,6 +171,17 @@
 	-webkit-box-pack: end;
 	-ms-flex-pack: end;
 	justify-content: flex-end;
+}
+
+.justify-between {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.justify-around {
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
 }
 
 .box-order-first {
@@ -204,9 +210,28 @@
 	padding-right: 1em;
 }
 
+.direction-column [class^="box"],
+.direction-column-reverse [class^="box"] {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .gutterless [class^="box"] {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.gutterless[class*="direction-column"] [class^="box"] {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.gutterless-sm[class*="direction-column"] [class^="box"],
+.gutterless-md[class*="direction-column"] [class^="box"] {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .box {
@@ -438,6 +463,11 @@
 		flex-wrap: wrap;
 	}
 
+	.wrap-reverse-sm {
+		-ms-flex-wrap: wrap-reverse;
+		flex-wrap: wrap-reverse;
+	}
+
 	.nowrap-sm {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
@@ -565,6 +595,16 @@
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
 		justify-content: flex-end;
+	}
+
+	.gutterless-sm [class^="box"] {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.gutterless-sm[class*="direction-column"] [class^="box"] {
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 	.box-sm-order-first {
@@ -812,6 +852,11 @@
 		flex-wrap: wrap;
 	}
 
+	.wrap-reverse-md {
+		-ms-flex-wrap: wrap-reverse;
+		flex-wrap: wrap-reverse;
+	}
+
 	.nowrap-md {
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
@@ -939,6 +984,16 @@
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
 		justify-content: flex-end;
+	}
+
+	.gutterless-md [class^="box"] {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.gutterless-md[class*="direction-column"] [class^="box"] {
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 	.box-md-order-first {
