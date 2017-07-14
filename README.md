@@ -5,6 +5,8 @@ The grid is based on the Bootstrap system, but utilizes much more controls that 
 
 - Author: Control
 - Version: 0.9
+- License:  *	License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
+
 
 ## Container
 To keep the content inside the grid we use the container class: `.container` or `.container-full`.
@@ -86,6 +88,7 @@ The rows have some standard properties. They wrap automatically and have a horiz
 | 0px and above             | 768px and above              | 992px and above              | State            |
 | ------------------------- | ---------------------------- | ---------------------------- | ---------------- |
 | .wrap                     | .wrap-sm                     | .wrap-md                     | Wrap             |
+| .wrap-reverse             | .wrap-reverse-sm             | .wrap-reverse-md             | Wrap Reverse     |
 | .nowrap                   | .nowrap-sm                   | .nowrap-md                   | No Wrap          |
 | .direction-row            | .direction-row-sm            | .direction-row-md            | Row              |
 | .direction-row-reverse    | .direction-row-reverse-sm    | .direction-row-reverse-md    | Row Reversed     |
