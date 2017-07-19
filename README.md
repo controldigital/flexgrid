@@ -104,6 +104,8 @@ The boxes are the classes that are placed inside a row which give you the option
 | --------------- | --------------- | --------------- | ----------------------------- |
 | .box            | .box-sm.        | .box-md         | All boxes are equal of size   |
 | .box-flex       | .box-sm-flex    | .box-md-flex    | Fills the space left in a row |
+| .box-flex-2     | .box-sm-flex-2  | .box-md-flex-2  | Fills the space left in a row |
+| .box-flex-3     | .box-sm-flex-3  | .box-md-flex-3  | Fills the space left in a row |
 | .box-static     | .box-sm-static  | .box-md-static  | Size of own content           |
 
 **For example**
