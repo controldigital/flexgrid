@@ -100,15 +100,16 @@ The rows have some standard properties. They wrap automatically and have a horiz
 The boxes are the classes that are placed inside a row which give you the options to divide the content in boxes with a flexible or a fixed size.
 
 ### Flexible boxes
-| 0px and above   | 768px and above | 992px and above | Size                          |
-| --------------- | --------------- | --------------- | ----------------------------- |
-| .box            | .box-sm.        | .box-md         | All boxes are equal of size   |
-| .box-flex       | .box-sm-flex    | .box-md-flex    | Fills the space left in a row |
-| .box-flex-2     | .box-sm-flex-2  | .box-md-flex-2  | Fills the space left in a row |
-| .box-flex-3     | .box-sm-flex-3  | .box-md-flex-3  | Fills the space left in a row |
-| .box-static     | .box-sm-static  | .box-md-static  | Size of own content           |
+| 0px and above   | 768px and above | 992px and above | Size                                                      |
+| --------------- | --------------- | --------------- | --------------------------------------------------------  |
+| .box            | .box-sm.        | .box-md         | All boxes are equal of size                               |
+| .box-flex       | .box-sm-flex    | .box-md-flex    | Fills the space left in a row                             |
+| .box-flex-1     | .box-sm-flex-1  | .box-md-flex-1  | Fills the space left in a row (1/x) (same as `.box-flex`) |
+| .box-flex-2     | .box-sm-flex-2  | .box-md-flex-2  | Fills the space left in a row (2/x)                       |
+| .box-flex-3     | .box-sm-flex-3  | .box-md-flex-3  | Fills the space left in a row (3/x)                       |
+| .box-static     | .box-sm-static  | .box-md-static  | Size of own content                                       |
 
-**For example**
+**Example:**
 
 ```html
 <div class="row">
@@ -117,7 +118,7 @@ The boxes are the classes that are placed inside a row which give you the option
   <div class="box"></div>
 </div>
 ```
-**results in:**
+**Results in:**
 
 ```
 ==.row ==========================================================
@@ -126,13 +127,16 @@ The boxes are the classes that are placed inside a row which give you the option
 || ------------------- ------------------- ------------------- ||
 =================================================================
 ```
+
+**Example:**
+
 ```html
 <div class="row">
   <div class="box-static"></div>
   <div class="box-flex"></div>
 </div>
 ```
-**results in:**
+**Results in:**
 
 ```
 ==.row ==========================================================
@@ -141,6 +145,11 @@ The boxes are the classes that are placed inside a row which give you the option
 || ------------------- --------------------------------------- ||
 =================================================================
 ```
+
+Flexible boxes like `.box-flex`, `.box-flex-1`, `.box-flex-2` and `.box-flex-3` divide the remaining space in proportion. The space left in the row or column is divided by the total of `flex-grow` values of the flexible children. The children then divide the space per flex-grow of the child.
+
+**Example:**
+When we have a `.box-flex-2`, a `.box-flex-3` and a `.box-flex-1` the total of flex-grow values is **6**. The remaining space is divided by this total. `.box-flex-2` will get **2/6**, `.box-flex-3` **3/6** and `.box-flex-1` **1/6** of the space available to its own size.
 
 ### Fixed boxes
 Flexible boxes are fun, but most of the time we need simple fixed structures that don't move. Fixed boxes are comparable with Bootstrap's cols. They gain a percentage of the container's width and move next to each other.
