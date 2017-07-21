@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Flexgrid.css</title>
     <meta charset="utf-8" />
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	  <meta name="mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Emiel Zuurbier, Control" />
+    <meta name="description" content="12 column grid made with Flexbox" />
+    <meta name="keywords" content="css, flexbox, 12, column, grid, class" />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="flexgrid.min.css" rel="stylesheet" />
     <link href="css/additional.css" rel="stylesheet" />
@@ -17,6 +20,9 @@
         <div class="row">
           <div class="box">
             <h1>Flexgrid.css</h1>
+            <p>
+              12 column grid made with Flexbox
+            </p>
           </div>
         </div>
       </div>
@@ -31,21 +37,30 @@
           <div class="box">
             <header>
               <h2>4 equal boxes</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row">
-          <div class="box">
-            <span class="inner">.box</span>
-          </div>
-          <div class="box">
-            <span class="inner">.box</span>
-          </div>
-          <div class="box">
-            <span class="inner">.box</span>
-          </div>
-          <div class="box">
-            <span class="inner">.box</span>
+        <div class="container-wrap">
+          <div class="row">
+            <div class="box">
+              <span class="inner">.box</span>
+            </div>
+            <div class="box">
+              <span class="inner">.box</span>
+            </div>
+            <div class="box">
+              <span class="inner">.box</span>
+            </div>
+            <div class="box">
+              <span class="inner">.box</span>
+            </div>
           </div>
         </div>
       </div>
@@ -57,18 +72,26 @@
           <div class="box">
             <header>
               <h2>Flexible boxes with flex-grow property</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-flex-1"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-flex-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-flex-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row">
-          <div class="box-flex-1">
-            <span class="inner">.box-flex-1</span>
-          </div>
-          <div class="box-flex-2">
-            <span class="inner">.box-flex-2</span>
-          </div>
-          <div class="box-flex-3">
-            <span class="inner">.box-flex-3</span>
+        <div class="container-wrap">
+          <div class="row">
+            <div class="box-flex-1">
+              <span class="inner">.box-flex-1</span>
+            </div>
+            <div class="box-flex-2">
+              <span class="inner">.box-flex-2</span>
+            </div>
+            <div class="box-flex-3">
+              <span class="inner">.box-flex-3</span>
+            </div>
           </div>
         </div>
       </div>
@@ -80,18 +103,26 @@
           <div class="box">
             <header>
               <h2>Filling in the space</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-static"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-static"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row">
-          <div class="box-static">
-            <span class="inner">.box-static</span>
-          </div>
-          <div class="box">
-            <span class="inner">.box</span>
-          </div>
-          <div class="box-static">
-            <span class="inner">.box-static</span>
+        <div class="container-wrap">
+          <div class="row">
+            <div class="box-static">
+              <span class="inner">.box-static</span>
+            </div>
+            <div class="box">
+              <span class="inner">.box</span>
+            </div>
+            <div class="box-static">
+              <span class="inner">.box-static</span>
+            </div>
           </div>
         </div>
       </div>
@@ -103,18 +134,26 @@
           <div class="box">
             <header>
               <h2>Space left?</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row">
-          <div class="box-3">
-            <span class="inner">.box-3</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box">
-            <span class="inner">.box</span>
+        <div class="container-wrap">
+          <div class="row">
+            <div class="box-3">
+              <span class="inner">.box-3</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box">
+              <span class="inner">.box</span>
+            </div>
           </div>
         </div>
       </div>
@@ -126,18 +165,174 @@
           <div class="box">
             <header>
               <h2>Gutterless boxes</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row gutterless"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row gutterless">
-          <div class="box">
-            <span class="inner-full">.gutterless .box</span>
+        <div class="container-wrap gutterless">
+          <div class="row gutterless">
+            <div class="box">
+              <span class="inner-full">.gutterless .box</span>
+            </div>
+            <div class="box">
+              <span class="inner-full">.gutterless .box</span>
+            </div>
+            <div class="box">
+              <span class="inner-full">.gutterless .box</span>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
           <div class="box">
-            <span class="inner-full">.gutterless .box</span>
+            <header>
+              <h2>Align items start</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-start"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+            </header>
           </div>
+        </div>
+        <div class="container-wrap">
+          <div class="row items-start">
+            <div class="box">
+              <span class="inner">.box
+                <p>Vivamizzle nec maurizzle egizzle nisi bow wow wow pretizzle.</p>
+                <p>Check it out sit funky fresh lacus. Nam ma nizzle break yo neck, yall eget lacus auctizzle feugiat.</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Sizzle vitae tortizzle in arcu shit consequizzle.</p>
+                <p>The bizzle convallizzle, arcu da bomb crazy shut the shizzle up</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Nulla fizzle. Pimpin' faucibizzle shut the shizzle up neque.</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
           <div class="box">
-            <span class="inner-full">.gutterless .box</span>
+            <header>
+              <h2>Align items end</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-end"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+            </header>
+          </div>
+        </div>
+        <div class="container-wrap">
+          <div class="row items-end">
+            <div class="box">
+              <span class="inner">.box
+                <p>Vivamizzle nec maurizzle egizzle nisi bow wow wow pretizzle.</p>
+                <p>Check it out sit funky fresh lacus. Nam ma nizzle break yo neck, yall eget lacus auctizzle feugiat.</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Sizzle vitae tortizzle in arcu shit consequizzle.</p>
+                <p>The bizzle convallizzle, arcu da bomb crazy shut the shizzle up</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Nulla fizzle. Pimpin' faucibizzle shut the shizzle up neque.</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="box">
+            <header>
+              <h2>Align items center</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-center"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+            </header>
+          </div>
+        </div>
+        <div class="container-wrap">
+          <div class="row items-center">
+            <div class="box">
+              <span class="inner">.box
+                <p>Vivamizzle nec maurizzle egizzle nisi bow wow wow pretizzle.</p>
+                <p>Check it out sit funky fresh lacus. Nam ma nizzle break yo neck, yall eget lacus auctizzle feugiat.</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Sizzle vitae tortizzle in arcu shit consequizzle.</p>
+                <p>The bizzle convallizzle, arcu da bomb crazy shut the shizzle up</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Nulla fizzle. Pimpin' faucibizzle shut the shizzle up neque.</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="box">
+            <header>
+              <h2>Align items stretch</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-stretch"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+            </header>
+          </div>
+        </div>
+        <div class="container-wrap">
+          <div class="row items-stretch">
+            <div class="box">
+              <span class="inner">.box
+                <p>Vivamizzle nec maurizzle egizzle nisi bow wow wow pretizzle.</p>
+                <p>Check it out sit funky fresh lacus. Nam ma nizzle break yo neck, yall eget lacus auctizzle feugiat.</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Sizzle vitae tortizzle in arcu shit consequizzle.</p>
+                <p>The bizzle convallizzle, arcu da bomb crazy shut the shizzle up</p></span>
+            </div>
+            <div class="box">
+              <span class="inner">.box
+                <p>Nulla fizzle. Pimpin' faucibizzle shut the shizzle up neque.</p>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -149,18 +344,26 @@
           <div class="box">
             <header>
               <h2>Justify start</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-start"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row justify-start">
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
+        <div class="container-wrap">
+          <div class="row justify-start">
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
           </div>
         </div>
       </div>
@@ -172,18 +375,26 @@
           <div class="box">
             <header>
               <h2>Justify center</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-center"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row justify-center">
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
+        <div class="container-wrap">
+          <div class="row justify-center">
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
           </div>
         </div>
       </div>
@@ -195,18 +406,26 @@
           <div class="box">
             <header>
               <h2>Justify end</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-end"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row justify-end">
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
+        <div class="container-wrap">
+          <div class="row justify-end">
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
           </div>
         </div>
       </div>
@@ -218,18 +437,26 @@
           <div class="box">
             <header>
               <h2>Justify between</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-between"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row justify-between">
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
+        <div class="container-wrap">
+          <div class="row justify-between">
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
           </div>
         </div>
       </div>
@@ -241,18 +468,26 @@
           <div class="box">
             <header>
               <h2>Justify around</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-around"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row justify-around">
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
+        <div class="container-wrap">
+          <div class="row justify-around">
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
           </div>
         </div>
       </div>
@@ -264,18 +499,26 @@
           <div class="box">
             <header>
               <h2>Justify with margins</h2>
+              <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2 box-to-right"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
             </header>
           </div>
         </div>
-        <div class="row">
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2">
-            <span class="inner">.box-2</span>
-          </div>
-          <div class="box-2 box-to-right">
-            <span class="inner">.box-2</span>
+        <div class="container-wrap">
+          <div class="row">
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2">
+              <span class="inner">.box-2</span>
+            </div>
+            <div class="box-2 box-to-right">
+              <span class="inner">.box-2.box-to-right</span>
+            </div>
           </div>
         </div>
       </div>
