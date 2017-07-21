@@ -10,7 +10,7 @@
     <meta name="description" content="12 column grid made with Flexbox" />
     <meta name="keywords" content="css, flexbox, 12, column, grid, class" />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="flexgrid.min.css" rel="stylesheet" />
+    <link href="flexgrid.css" rel="stylesheet" />
     <link href="css/additional.css" rel="stylesheet" />
   </head>
   <body>
@@ -631,6 +631,32 @@
             </div>
           </div>
         </div>
+        <div class="container">
+          <div class="row">
+            <div class="box">
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3 box-to-right"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2 box-to-left"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3 box-to-right"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="row">
+              <div class="box-2 box-to-right">
+                <span class="inner">.box-3.box-to-right</span>
+              </div>
+              <div class="box-2 box-to-right">
+                <span class="inner">.box-2.box-to-left</span>
+              </div>
+              <div class="box-2 box-to-left">
+                <span class="inner">.box-3.box-to-right</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="reverse">
@@ -775,6 +801,161 @@
               </div>
               <div class="box-4">
                 <span class="inner">Sixth box</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="column">
+        <div class="container">
+          <div class="row">
+            <div class="box">
+              <header>
+                <h2>Column</h2>
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="column">
+              <div class="box">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box">
+                <span class="inner">.box</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="column-align-start">
+        <div class="container">
+          <div class="row">
+            <div class="box">
+              <header>
+                <h2>Column align start</h2>
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column items-start"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="column items-start">
+              <div class="box">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box">
+                <span class="inner">.box</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="column-align-end">
+        <div class="container">
+          <div class="row">
+            <div class="box">
+              <header>
+                <h2>Column align end</h2>
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column items-end"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="column items-end">
+              <div class="box-3">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box-3">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box-3">
+                <span class="inner">.box</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="column-align-center">
+        <div class="container">
+          <div class="row">
+            <div class="box">
+              <header>
+                <h2>Column align center</h2>
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column items-center"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="column items-center">
+              <div class="box-3">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box-3">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box-3">
+                <span class="inner">.box</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="column-align-self">
+        <div class="container">
+          <div class="row">
+            <div class="box">
+              <header>
+                <h2>Aligning self with columns</h2>
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3 box-align-start"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3 box-align-center"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3 box-align-end"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="column">
+              <div class="box-3 box-align-start">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box-3 box-align-center">
+                <span class="inner">.box</span>
+              </div>
+              <div class="box-3 box-align-end">
+                <span class="inner">.box</span>
               </div>
             </div>
           </div>

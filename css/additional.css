@@ -61,6 +61,10 @@ section {
   margin-bottom: 2em;
 }
 
+.column .inner {
+	height: 100%;
+}
+
 .items-stretch .inner {
   height: calc(100% - 2em);
 }
@@ -83,6 +87,7 @@ pre {
   color: #ffffff;
 	word-wrap: break-word;
 	white-space: pre-wrap;
+	margin: 1em 0;
 }
 
 .p-tag {
