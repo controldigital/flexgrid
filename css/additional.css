@@ -40,7 +40,10 @@ section {
   padding: 3em 1em 1em;
   background: #00897B;
   border-radius: 0.25em;
-	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .container-wrap.gutterless {
