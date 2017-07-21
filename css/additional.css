@@ -40,6 +40,7 @@ section {
   padding: 3em 1em 1em;
   background: #00897B;
   border-radius: 0.25em;
+	overflow: hidden;
 }
 
 .container-wrap.gutterless {
@@ -55,7 +56,6 @@ section {
   text-align: center;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   margin-bottom: 2em;
-  min-width: 10em;
 }
 
 .items-stretch .inner {
@@ -78,6 +78,8 @@ pre {
   padding: 1em;
   border-radius: 0.25em;
   color: #ffffff;
+	word-wrap: break-word;
+	white-space: pre-wrap;
 }
 
 .p-tag {
