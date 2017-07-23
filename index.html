@@ -9,6 +9,7 @@
     <meta name="author" content="Emiel Zuurbier, Control" />
     <meta name="description" content="12 column grid made with Flexbox" />
     <meta name="keywords" content="css, flexbox, 12, column, grid, class" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="flexgrid.css" rel="stylesheet" />
     <link href="css/additional.css" rel="stylesheet" />
@@ -17,12 +18,16 @@
 
     <header id="header">
       <div class="container">
-        <div class="row">
+        <div class="row items-baseline">
           <div class="box">
             <h1>Flexgrid.css</h1>
             <p>
-              12 column grid made with Flexbox
+              12 column grid made with Flexbox<br />
+              Version: 0.9
             </p>
+          </div>
+          <div class="box-static">
+            <a class="button" href="https://github.com/controldigital/flexgrid"><i class="fa fa-github"></i> Github repo</a>
           </div>
         </div>
       </div>
@@ -36,7 +41,10 @@
           <div class="row">
             <div class="box">
               <header>
-                <h2>4 equal boxes</h2>
+                <h2>Flexible boxes with equal size</h2>
+                <p>
+                  Have your space filled up nicely with equal sized boxes. Forget about calculating the amount of items in a row. Just add them en they will fit!
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -72,6 +80,10 @@
             <div class="box">
               <header>
                 <h2>Flexible boxes with flex-grow property</h2>
+                <p>
+                  Want to have some boxes that are always a little bit bigger than the rest, but still has the flexibility of the equal sized boxes. <br />
+                  Look no further. Boxes with the flex-grow property used are just the thing for you. Starting from <strong>.box-flex-1</strong> and going up to <strong>.box-flex-12</strong>.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-flex-1"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -103,6 +115,9 @@
             <div class="box">
               <header>
                 <h2>Filling in the space</h2>
+                <p>
+                  Easily fill up space with with a box. No more hassle trying to get the perfect size.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-static"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -125,15 +140,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="space-left">
-        <div class="container">
           <div class="row">
             <div class="box">
-              <header>
-                <h2>Space left?</h2>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -165,6 +173,10 @@
             <div class="box">
               <header>
                 <h2>Fixed sizes</h2>
+                <p>
+                  For the super controlling dev we got the standard columns system, based on Twitter's Bootstrap.<br />
+                  Build your 12 column grid the way you want and are used to.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -232,6 +244,9 @@
             <div class="box">
               <header>
                 <h2>Gutterless boxes</h2>
+                <p>
+                  Get rid of them gutters to get seemless boxes and get those boxes touching.<br /> Perfect for your collage of cat photos!
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row gutterless"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -263,6 +278,9 @@
             <div class="box">
               <header>
                 <h2>Align items start</h2>
+                <p>
+                  Align your children on the start of the Main axis.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-start"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -300,6 +318,9 @@
             <div class="box">
               <header>
                 <h2>Align items end</h2>
+                <p>
+                  Align your children on the end of the Main axis.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-end"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -337,6 +358,9 @@
             <div class="box">
               <header>
                 <h2>Align items center</h2>
+                <p>
+                  Align your children in the center of the Main axis.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-center"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -374,6 +398,9 @@
             <div class="box">
               <header>
                 <h2>Align items stretch</h2>
+                <p>
+                  Stretch your children to fill the Main axis. <br />Beware! Do no use height: 100% on the children for it might bug the stretch on some browsers.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-stretch"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -411,6 +438,9 @@
             <div class="box">
               <header>
                 <h2>Align items baseline</h2>
+                <p>
+                  Align your children on the baseline of the first text element of the Main axis.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row items-baseline"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -437,7 +467,7 @@
               </div>
               <div class="box">
                 <span class="inner">
-                  <p></p><p></p>
+                  <p></p><p></p><p></p>
                   .box
                   <p>Nulla fizzle. Pimpin' faucibizzle shut the shizzle up neque.</p>
                 </span>
@@ -453,6 +483,9 @@
             <div class="box">
               <header>
                 <h2>Justify start</h2>
+                <p>
+                  Align your children on the start of the Cross axis.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-start"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -478,43 +511,15 @@
         </div>
       </section>
 
-      <section id="justify-center">
-        <div class="container">
-          <div class="row">
-            <div class="box">
-              <header>
-                <h2>Justify center</h2>
-                <pre>
-&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-center"</span>&gt;
-  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
-  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
-  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
-&lt;<span class="p-tag">/div</span>&gt;</pre>
-              </header>
-            </div>
-          </div>
-          <div class="container-wrap">
-            <div class="row justify-center">
-              <div class="box-2">
-                <span class="inner">.box-2</span>
-              </div>
-              <div class="box-2">
-                <span class="inner">.box-2</span>
-              </div>
-              <div class="box-2">
-                <span class="inner">.box-2</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="justify-end">
         <div class="container">
           <div class="row">
             <div class="box">
               <header>
                 <h2>Justify end</h2>
+                <p>
+                  Align your children on the end of the Cross axis.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-end"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -540,12 +545,49 @@
         </div>
       </section>
 
+      <section id="justify-center">
+        <div class="container">
+          <div class="row">
+            <div class="box">
+              <header>
+                <h2>Justify center</h2>
+                <p>
+                  Align your children in the center of the Cross axis.
+                </p>
+                <pre>
+&lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-center"</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
+&lt;<span class="p-tag">/div</span>&gt;</pre>
+              </header>
+            </div>
+          </div>
+          <div class="container-wrap">
+            <div class="row justify-center">
+              <div class="box-2">
+                <span class="inner">.box-2</span>
+              </div>
+              <div class="box-2">
+                <span class="inner">.box-2</span>
+              </div>
+              <div class="box-2">
+                <span class="inner">.box-2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="justify-between">
         <div class="container">
           <div class="row">
             <div class="box">
               <header>
                 <h2>Justify between</h2>
+                <p>
+                  Space for everyone! Even out the space between the children with equal spaces.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-between"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -577,6 +619,9 @@
             <div class="box">
               <header>
                 <h2>Justify around</h2>
+                <p>
+                  The space around the children are equaly distributed around all sides.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row justify-around"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -608,6 +653,9 @@
             <div class="box">
               <header>
                 <h2>Justify with margins</h2>
+                <p>
+                  Wow! With margins? But how?
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-2"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -665,6 +713,9 @@
             <div class="box">
               <header>
                 <h2>Reversing the direction</h2>
+                <p>
+                  Turn around!
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row direction-row-reverse"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;First box&lt;<span class="p-tag">/div</span>&gt;
@@ -696,11 +747,14 @@
             <div class="box">
               <header>
                 <h2>Ordering boxes</h2>
+                <p>
+                  Determining who's first and who's last.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box box-order-last"</span>&gt;First box&lt;<span class="p-tag">/div</span>&gt;
-  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box box-order-first"</span>&gt;Second box&lt;<span class="p-tag">/div</span>&gt;
-  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box box-order-middle"</span>&gt;Third box&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box box-order-middle"</span>&gt;Second box&lt;<span class="p-tag">/div</span>&gt;
+  &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box box-order-first"</span>&gt;Third box&lt;<span class="p-tag">/div</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box box-order-middle"</span>&gt;Fourth box&lt;<span class="p-tag">/div</span>&gt;
 &lt;<span class="p-tag">/div</span>&gt;</pre>
               </header>
@@ -711,10 +765,10 @@
               <div class="box box-order-last">
                 <span class="inner">First box</span>
               </div>
-              <div class="box box-order-first">
+              <div class="box box-order-middle">
                 <span class="inner">Second box</span>
               </div>
-              <div class="box box-order-middle">
+              <div class="box box-order-first">
                 <span class="inner">Third box</span>
               </div>
               <div class="box box-order-middle">
@@ -731,6 +785,9 @@
             <div class="box">
               <header>
                 <h2>No wrapping (single line)</h2>
+                <p>
+                  Single file everybody!
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row nowrap"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-4"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -770,6 +827,9 @@
             <div class="box">
               <header>
                 <h2>Reverse wrapping</h2>
+                <p>
+                  Wrap up instead of down.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="row wrap-reverse"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-4"</span>&gt;First box&lt;<span class="p-tag">/div</span>&gt;
@@ -813,6 +873,9 @@
             <div class="box">
               <header>
                 <h2>Column</h2>
+                <p>
+                  Columns are also pretty cool
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -844,6 +907,9 @@
             <div class="box">
               <header>
                 <h2>Column align start</h2>
+                <p>
+                  The same as with rows, but different.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column items-start"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -875,6 +941,9 @@
             <div class="box">
               <header>
                 <h2>Column align end</h2>
+                <p>
+                  Dito.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column items-end"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -906,6 +975,9 @@
             <div class="box">
               <header>
                 <h2>Column align center</h2>
+                <p>
+                  Yaawwnn.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column items-center"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -937,6 +1009,9 @@
             <div class="box">
               <header>
                 <h2>Aligning self with columns</h2>
+                <p>
+                  Looks like what we did with margins. But then with align-self.
+                </p>
                 <pre>
 &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="column"</span>&gt;
   &lt;<span class="p-tag">div</span> <span class="p-attr">class</span><span class="p-val">="box-3 box-align-start"</span>&gt;&lt;<span class="p-tag">/div</span>&gt;
@@ -963,6 +1038,24 @@
       </section>
 
     </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row items-baseline justify-between">
+          <div class="box-static">
+            <h3>Made with love by <a href="http://controldigital.nl">Control</a></h3>
+            <p>
+              Version: 0.9
+            </p>
+          </div>
+          <div class="box-static">
+            <p>
+              <a class="button" href="https://github.com/controldigital/flexgrid"><i class="fa fa-github"></i> Github repo</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
