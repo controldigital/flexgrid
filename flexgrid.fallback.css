@@ -25,7 +25,7 @@
 }
 
 .row {
-	display: table;
+	display: block;
   position: relative;
 	margin: 0 -16px;
 }
@@ -46,6 +46,14 @@
 .column::after {
   display: table;
   content: "";
+	clear: both;
+}
+
+[class^="box"] {
+	display: block;
+	float: left;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 .wrap {
@@ -71,11 +79,6 @@
 	display: inline-block;
 }
 
-.row [class^="box"],
-.direction-row [class^="box"] {
-  display: table-cell;
-}
-
 .direction-row-reverse {
 	direction: rtl;
 }
@@ -97,25 +100,42 @@
 	transform: scaleY(-1);
 }
 
+.items-center,
+.items-start,
+.items-end,
+.items-baseline,
+.items-stretch {
+	display: table;
+}
+
 .items-center [class^="box"] {
+	display: table-cell;
   vertical-align: middle;
+	float: none;
 }
 
 .items-start [class^="box"] {
+	display: table-cell;
   vertical-align: top;
+	float: none;
 }
 
 .items-end [class^="box"] {
+	display: table-cell;
   vertical-align: bottom;
+	float: none;
 }
 
 .items-baseline [class^="box"] {
+	display: table-cell;
   vertical-align: baseline;
+	float: none;
 }
 
 .items-stretch [class^="box"] {
-	display: inline-block;
+	display: table-cell;
 	height: 100%;
+	float: none;
 }
 
 .content-center {
@@ -134,12 +154,19 @@
 	display: inline-block;
 }
 
-.justify-center {
-	text-align: center;
+.justify-center [class^="box"],
+.justify-start [class^="box"],
+.justify-end [class^="box"],
+.justify-between [class^="box"] {
+	display: inline-block;
 }
 
-.justify-start [class^="box"] {
-	display: inline-block;
+.justify-start {
+	text-align: left;
+}
+
+.justify-center {
+	text-align: center;
 }
 
 .justify-end {
@@ -166,15 +193,11 @@
 .justify-end [class^="box"],
 .justify-between [class^="box"] {
 	display: inline-block;
+	float: none;
 }
 
 .justify-around [class^="box"] {
 	display: table-cell;
-}
-
-[class^="box"] {
-	padding-left: 16px;
-	padding-right: 16px;
 }
 
 .direction-column [class^="box"],
@@ -234,18 +257,22 @@
 
 .box-to-bottom {
 	margin-top: auto;
+	float: none;
 }
 
 .box-to-left {
 	margin-right: auto;
+	float: none;
 }
 
 .box-to-top {
 	margin-bottom: auto;
+	float: none;
 }
 
 .box-to-right {
 	margin-left: auto;
+	float: none;
 }
 
 .box-sm-1, .box-sm-2, .box-sm-3, .box-sm-4, .box-sm-5, .box-sm-6, .box-sm-7, .box-sm-8, .box-sm-9, .box-sm-10, .box-sm-11, .box-sm-12,
