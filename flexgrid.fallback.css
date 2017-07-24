@@ -1,7 +1,7 @@
 /**
  *	Flexgrid.css Fallback
  *	Flebox 12 column grid with flexible layouts fallback support for browsers that don't support Flexbox
- *	Version: 0.9
+ *	Version: 1.0
  *	Author: Control
  *	License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
  */
@@ -75,8 +75,12 @@
 	display: inline-block;
 }
 
+.nowrap {
+	display: table;
+}
+
 .nowrap [class^="box"] {
-	display: inline-block;
+	display: table-cell;
 }
 
 .direction-row-reverse {
@@ -108,34 +112,33 @@
 	display: table;
 }
 
-.items-center [class^="box"] {
+.items-center [class^="box"],
+.items-start [class^="box"],
+.items-end [class^="box"],
+.items-baseline [class^="box"],
+.items-stretch [class^="box"] {
 	display: table-cell;
-  vertical-align: middle;
 	float: none;
+}
+
+.items-center [class^="box"] {
+  vertical-align: middle;
 }
 
 .items-start [class^="box"] {
-	display: table-cell;
   vertical-align: top;
-	float: none;
 }
 
 .items-end [class^="box"] {
-	display: table-cell;
   vertical-align: bottom;
-	float: none;
 }
 
 .items-baseline [class^="box"] {
-	display: table-cell;
   vertical-align: baseline;
-	float: none;
 }
 
 .items-stretch [class^="box"] {
-	display: table-cell;
 	height: 100%;
-	float: none;
 }
 
 .content-center {
@@ -230,49 +233,55 @@
 	width: auto;
 }
 
-.box-align-start {
+.box-align-start,
+.box-align-end,
+.box-align-center,
+.box-align-baseline,
+.box-align-stretch {
 	display: table-cell;
+}
+
+.box-align-start {
 	vertical-align: top;
 }
 
 .box-align-end {
-	display: table-cell;
 	vertical-align: bottom;
 }
 
 .box-align-center {
-	display: table-cell;
 	vertical-align: middle;
 }
 
 .box-align-baseline {
-	display: table-cell;
 	vertical-align: baseline;
 }
 
 .box-align-stretch {
-	display: inline-block;
 	height: 100%;
+}
+
+.box-to-bottom,
+.box-to-left,
+.box-to-top,
+.box-to-right {
+	float: none;
 }
 
 .box-to-bottom {
 	margin-top: auto;
-	float: none;
 }
 
 .box-to-left {
 	margin-right: auto;
-	float: none;
 }
 
 .box-to-top {
 	margin-bottom: auto;
-	float: none;
 }
 
 .box-to-right {
 	margin-left: auto;
-	float: none;
 }
 
 .box-sm-1, .box-sm-2, .box-sm-3, .box-sm-4, .box-sm-5, .box-sm-6, .box-sm-7, .box-sm-8, .box-sm-9, .box-sm-10, .box-sm-11, .box-sm-12,
@@ -396,6 +405,7 @@
 	display: table;
 }
 
+/* TODO: Update all media query properties with the fixed fallbacks */
 @media all and (min-width: 768px) {
 
 	.wrap-sm {
@@ -417,12 +427,12 @@
 		display: inline-block;
 	}
 
-	.nowrap-sm [class^="box"] {
-		display: inline-block;
+	.nowrap-sm {
+		display: table;
 	}
 
-	.direction-row-sm [class^="box"] {
-	  display: table-cell;
+	.nowrap-sm [class^="box"] {
+		display: table-cell;
 	}
 
 	.direction-row-reverse-sm {
@@ -433,6 +443,7 @@
 		direction: ltr;
 	}
 
+	.column [class=^"box"],
 	.direction-column-sm [class^="box"],
 	.direction-column-reverse-sm [class^="box"] {
 		display: block;
@@ -443,6 +454,23 @@
 		-webkit-transform: scaleY(-1);
 		-ms-transform: scaleY(-1);
 		transform: scaleY(-1);
+	}
+
+	.items-center-sm,
+	.items-start-sm,
+	.items-end-sm,
+	.items-baseline-sm,
+	.items-stretch-sm {
+		display: table;
+	}
+
+	.items-center-sm [class^="box"],
+	.items-start-sm [class^="box"],
+	.items-end-sm [class^="box"],
+	.items-baseline-sm [class^="box"],
+	.items-stretch-sm [class^="box"] {
+		display: table-cell;
+		float: none;
 	}
 
 	.items-center-sm [class^="box"] {
@@ -462,7 +490,6 @@
 	}
 
 	.items-stretch-sm [class^="box"] {
-		display: inline-block;
 		height: 100%;
 	}
 
@@ -482,12 +509,19 @@
 		display: inline-block;
 	}
 
-	.justify-center-sm {
-		text-align: center;
+	.justify-center-sm [class^="box"],
+	.justify-start-sm [class^="box"],
+	.justify-end-sm [class^="box"],
+	.justify-between-sm [class^="box"] {
+		display: inline-block;
 	}
 
-	.justify-start-sm [class^="box"] {
-		display: inline-block;
+	.justify-start-sm {
+		text-align: left;
+	}
+
+	.justify-center-sm {
+		text-align: center;
 	}
 
 	.justify-end-sm {
@@ -514,15 +548,11 @@
 	.justify-end-sm [class^="box"],
 	.justify-between-sm [class^="box"] {
 		display: inline-block;
+		float: none;
 	}
 
 	.justify-around-sm [class^="box"] {
 		display: table-cell;
-	}
-
-	[class^="box"] {
-		padding-left: 16px;
-		padding-right: 16px;
 	}
 
 	.direction-column-sm [class^="box"],
@@ -544,9 +574,44 @@
 	}
 
 	.box-sm,
-  .box-sm-flex,
-  .box-sm-static {
+	.box-sm-flex,
+	.box-sm-static {
 		width: auto;
+	}
+
+	.box-sm-align-start,
+	.box-sm-align-end,
+	.box-sm-align-center,
+	.box-sm-align-baseline,
+	.box-sm-align-stretch {
+		display: table-cell;
+	}
+
+	.box-sm-align-start {
+		vertical-align: top;
+	}
+
+	.box-sm-align-end {
+		vertical-align: bottom;
+	}
+
+	.box-sm-align-center {
+		vertical-align: middle;
+	}
+
+	.box-sm-align-baseline {
+		vertical-align: baseline;
+	}
+
+	.box-sm-align-stretch {
+		height: 100%;
+	}
+
+	.box-sm-to-bottom,
+	.box-sm-to-left,
+	.box-sm-to-top,
+	.box-sm-to-right {
+		float: none;
 	}
 
 	.box-sm-to-bottom {
@@ -704,12 +769,12 @@
 		display: inline-block;
 	}
 
-	.nowrap-md [class^="box"] {
-		display: inline-block;
+	.nowrap-md {
+		display: table;
 	}
 
-	.direction-row-md [class^="box"] {
-	  display: table-cell;
+	.nowrap-md [class^="box"] {
+		display: table-cell;
 	}
 
 	.direction-row-reverse-md {
@@ -720,6 +785,7 @@
 		direction: ltr;
 	}
 
+	.column [class=^"box"],
 	.direction-column-md [class^="box"],
 	.direction-column-reverse-md [class^="box"] {
 		display: block;
@@ -730,6 +796,23 @@
 		-webkit-transform: scaleY(-1);
 		-ms-transform: scaleY(-1);
 		transform: scaleY(-1);
+	}
+
+	.items-center-md,
+	.items-start-md,
+	.items-end-md,
+	.items-baseline-md,
+	.items-stretch-md {
+		display: table;
+	}
+
+	.items-center-md [class^="box"],
+	.items-start-md [class^="box"],
+	.items-end-md [class^="box"],
+	.items-baseline-md [class^="box"],
+	.items-stretch-md [class^="box"] {
+		display: table-cell;
+		float: none;
 	}
 
 	.items-center-md [class^="box"] {
@@ -749,7 +832,6 @@
 	}
 
 	.items-stretch-md [class^="box"] {
-		display: inline-block;
 		height: 100%;
 	}
 
@@ -769,12 +851,19 @@
 		display: inline-block;
 	}
 
-	.justify-center-md {
-		text-align: center;
+	.justify-center-md [class^="box"],
+	.justify-start-md [class^="box"],
+	.justify-end-md [class^="box"],
+	.justify-between-md [class^="box"] {
+		display: inline-block;
 	}
 
-	.justify-start-md [class^="box"] {
-		display: inline-block;
+	.justify-start-md {
+		text-align: left;
+	}
+
+	.justify-center-md {
+		text-align: center;
 	}
 
 	.justify-end-md {
@@ -801,15 +890,11 @@
 	.justify-end-md [class^="box"],
 	.justify-between-md [class^="box"] {
 		display: inline-block;
+		float: none;
 	}
 
 	.justify-around-md [class^="box"] {
 		display: table-cell;
-	}
-
-	[class^="box"] {
-		padding-left: 16px;
-		padding-right: 16px;
 	}
 
 	.direction-column-md [class^="box"],
@@ -831,9 +916,44 @@
 	}
 
 	.box-md,
-  .box-md-flex,
-  .box-md-static, {
+	.box-md-flex,
+	.box-md-static {
 		width: auto;
+	}
+
+	.box-md-align-start,
+	.box-md-align-end,
+	.box-md-align-center,
+	.box-md-align-baseline,
+	.box-md-align-stretch {
+		display: table-cell;
+	}
+
+	.box-md-align-start {
+		vertical-align: top;
+	}
+
+	.box-md-align-end {
+		vertical-align: bottom;
+	}
+
+	.box-md-align-center {
+		vertical-align: middle;
+	}
+
+	.box-md-align-baseline {
+		vertical-align: baseline;
+	}
+
+	.box-md-align-stretch {
+		height: 100%;
+	}
+
+	.box-md-to-bottom,
+	.box-md-to-left,
+	.box-md-to-top,
+	.box-md-to-right {
+		float: none;
 	}
 
 	.box-md-to-bottom {
