@@ -1,7 +1,7 @@
 /**
  *	Flexgrid.css
  *	Flebox 12 column grid with flexible layouts
- *	Version: 1.0
+ *	Version: 1.1
  *	Author: Control
  *	License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
  */
@@ -70,10 +70,10 @@
 
 .direction-row-reverse {
 	-webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
- flex-direction: row-reverse;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
 }
 
 .direction-column {
@@ -85,10 +85,10 @@
 
 .direction-column-reverse {
 	-webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: column-reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
 }
 
 .items-center {
@@ -217,6 +217,7 @@
 	padding-bottom: 1em;
 	padding-left: 0;
 	padding-right: 0;
+	max-width: none !important;
 }
 
 .gutterless [class^="box"] {
@@ -334,9 +335,9 @@
 
 .box-align-center {
 	-webkit-align-self: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
 }
 
 .box-align-baseline {
@@ -373,12 +374,14 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
+	max-width: 100%;
 }
 
 .box-1 {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 8.33333333%;
 	flex: 0 0 8.33333333%;
+	max-width: 8.33333333%;
 }
 
 .box-offset-1 {
@@ -389,6 +392,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 16.66666667%;
 	flex: 0 0 16.66666667%;
+	max-width: 16.66666667%;
 }
 
 .box-offset-2 {
@@ -399,6 +403,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 25%;
 	flex: 0 0 25%;
+	max-width: 25%;
 }
 
 .box-offset-3 {
@@ -409,6 +414,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 33.33333333%;
 	flex: 0 0 33.33333333%;
+	max-width: 33.33333333%;
 }
 
 .box-offset-4 {
@@ -419,6 +425,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 41.66666667%;
 	flex: 0 0 41.66666667%;
+	max-width: 41.66666667%;
 }
 
 .box-offset-5 {
@@ -429,6 +436,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 50%;
 	flex: 0 0 50%;
+	max-width: 50%;
 }
 
 .box-offset-6 {
@@ -439,6 +447,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 58.33333333%;
 	flex: 0 0 58.33333333%;
+	max-width: 58.33333333%;
 }
 
 .box-offset-7 {
@@ -449,6 +458,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 66.66666667%;
 	flex: 0 0 66.66666667%;
+	max-width: 66.66666667%;
 }
 
 .box-offset-8 {
@@ -459,6 +469,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 75%;
 	flex: 0 0 75%;
+	max-width: 75%;
 }
 
 .box-offset-9 {
@@ -469,6 +480,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 83.33333333%;
 	flex: 0 0 83.33333333%;
+	max-width: 83.33333333%;
 }
 
 .box-offset-10 {
@@ -479,6 +491,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 91.66666667%;
 	flex: 0 0 91.66666667%;
+	max-width: 91.66666667%;
 }
 
 .box-offset-11 {
@@ -489,6 +502,7 @@
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
+	max-width: 100%;
 }
 
 .box-offset-12 {
@@ -519,9 +533,9 @@
 
 .box-show-inline-flex {
 	display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 }
 
 @media all and (min-width: 48em) {
@@ -550,10 +564,10 @@
 
 	.direction-row-reverse-sm {
 		-webkit-box-orient: horizontal;
-	  -webkit-box-direction: reverse;
-	  -webkit-flex-direction: row-reverse;
-	  -ms-flex-direction: row-reverse;
-	 flex-direction: row-reverse;
+		-webkit-box-direction: reverse;
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
 	}
 
 	.direction-column-sm {
@@ -698,21 +712,21 @@
 
 	.box-sm-align-start {
 		-webkit-align-self: flex-start;
-	    -ms-flex-item-align: start;
-	    align-self: flex-start;
+		-ms-flex-item-align: start;
+		align-self: flex-start;
 	}
 
 	.box-sm-align-end {
 		-webkit-align-self: flex-end;
-	    -ms-flex-item-align: end;
-	    align-self: flex-end;
+		-ms-flex-item-align: end;
+		align-self: flex-end;
 	}
 
 	.box-sm-align-center {
 		-webkit-align-self: center;
-	    -ms-flex-item-align: center;
-	    -ms-grid-row-align: center;
-	    align-self: center;
+		-ms-flex-item-align: center;
+		-ms-grid-row-align: center;
+		align-self: center;
 	}
 
 	.box-sm-align-baseline {
@@ -833,6 +847,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 8.33333333%;
 		flex: 0 0 8.33333333%;
+		max-width: 8.33333333%;
 	}
 
 	.box-sm-offset-1 {
@@ -843,6 +858,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 16.66666667%;
 		flex: 0 0 16.66666667%;
+		max-width: 16.66666667%;
 	}
 
 	.box-sm-offset-2 {
@@ -853,6 +869,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 25%;
 		flex: 0 0 25%;
+		max-width: 25%;
 	}
 
 	.box-sm-offset-3 {
@@ -863,6 +880,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 33.33333333%;
 		flex: 0 0 33.33333333%;
+		max-width: 33.33333333%;
 	}
 
 	.box-sm-offset-4 {
@@ -873,6 +891,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 41.66666667%;
 		flex: 0 0 41.66666667%;
+		max-width: 41.66666667%;
 	}
 
 	.box-sm-offset-5 {
@@ -883,6 +902,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 50%;
 		flex: 0 0 50%;
+		max-width: 50%;
 	}
 
 	.box-sm-offset-6 {
@@ -893,6 +913,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 58.33333333%;
 		flex: 0 0 58.33333333%;
+		max-width: 58.33333333%;
 	}
 
 	.box-sm-offset-7 {
@@ -903,6 +924,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 66.66666667%;
 		flex: 0 0 66.66666667%;
+		max-width: 66.66666667%;
 	}
 
 	.box-sm-offset-8 {
@@ -913,6 +935,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 75%;
 		flex: 0 0 75%;
+		max-width: 75%;
 	}
 
 	.box-sm-offset-9 {
@@ -923,6 +946,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 83.33333333%;
 		flex: 0 0 83.33333333%;
+		max-width: 83.33333333%;
 	}
 
 	.box-sm-offset-10 {
@@ -933,6 +957,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 91.66666667%;
 		flex: 0 0 91.66666667%;
+		max-width: 91.66666667%;
 	}
 
 	.box-sm-offset-11 {
@@ -943,6 +968,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 100%;
 		flex: 0 0 100%;
+		max-width: 100%;
 	}
 
 	.box-sm-offset-12 {
@@ -973,9 +999,9 @@
 
 	.box-sm-show-inline-flex {
 		display: -webkit-inline-box;
-	  display: -webkit-inline-flex;
-	  display: -ms-inline-flexbox;
-	  display: inline-flex;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
 	}
 
 }
@@ -1006,10 +1032,10 @@
 
 	.direction-row-reverse-md {
 		-webkit-box-orient: horizontal;
-	  -webkit-box-direction: reverse;
-	  -webkit-flex-direction: row-reverse;
-	  -ms-flex-direction: row-reverse;
-	 flex-direction: row-reverse;
+		-webkit-box-direction: reverse;
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
 	}
 
 	.direction-column-md {
@@ -1021,10 +1047,10 @@
 
 	.direction-column-reverse-md {
 		-webkit-box-orient: vertical;
-	  -webkit-box-direction: reverse;
-	  -webkit-flex-direction: column-reverse;
-	  -ms-flex-direction: column-reverse;
-	  flex-direction: column-reverse;
+		-webkit-box-direction: reverse;
+		-webkit-flex-direction: column-reverse;
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
 	}
 
 	.items-center-md {
@@ -1154,21 +1180,21 @@
 
 	.box-md-align-start {
 		-webkit-align-self: flex-start;
-	    -ms-flex-item-align: start;
-	    align-self: flex-start;
+		-ms-flex-item-align: start;
+		align-self: flex-start;
 	}
 
 	.box-md-align-end {
 		-webkit-align-self: flex-end;
-	    -ms-flex-item-align: end;
-	    align-self: flex-end;
+		-ms-flex-item-align: end;
+		align-self: flex-end;
 	}
 
 	.box-md-align-center {
 		-webkit-align-self: center;
-	    -ms-flex-item-align: center;
-	    -ms-grid-row-align: center;
-	    align-self: center;
+		-ms-flex-item-align: center;
+		-ms-grid-row-align: center;
+		align-self: center;
 	}
 
 	.box-md-align-baseline {
@@ -1289,6 +1315,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 8.33333333%;
 		flex: 0 0 8.33333333%;
+		max-width: 8.33333333%;
 	}
 
 	.box-md-offset-1 {
@@ -1299,6 +1326,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 16.66666667%;
 		flex: 0 0 16.66666667%;
+		max-width: 16.66666667%;
 	}
 
 	.box-md-offset-2 {
@@ -1309,6 +1337,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 25%;
 		flex: 0 0 25%;
+		max-width: 25%;
 	}
 
 	.box-md-offset-3 {
@@ -1319,6 +1348,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 33.33333333%;
 		flex: 0 0 33.33333333%;
+		max-width: 33.33333333%;
 	}
 
 	.box-md-offset-4 {
@@ -1329,6 +1359,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 41.66666667%;
 		flex: 0 0 41.66666667%;
+		max-width: 41.66666667%;
 	}
 
 	.box-md-offset-5 {
@@ -1339,6 +1370,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 50%;
 		flex: 0 0 50%;
+		max-width: 50%;
 	}
 
 	.box-md-offset-6 {
@@ -1349,6 +1381,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 58.33333333%;
 		flex: 0 0 58.33333333%;
+		max-width: 58.33333333%;
 	}
 
 	.box-md-offset-7 {
@@ -1359,6 +1392,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 66.66666667%;
 		flex: 0 0 66.66666667%;
+		max-width: 66.66666667%;
 	}
 
 	.box-md-offset-8 {
@@ -1369,6 +1403,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 75%;
 		flex: 0 0 75%;
+		max-width: 75%;
 	}
 
 	.box-md-offset-9 {
@@ -1379,6 +1414,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 83.33333333%;
 		flex: 0 0 83.33333333%;
+		max-width: 83.33333333%;
 	}
 
 	.box-md-offset-10 {
@@ -1389,6 +1425,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 91.66666667%;
 		flex: 0 0 91.66666667%;
+		max-width: 91.66666667%;
 	}
 
 	.box-md-offset-11 {
@@ -1399,6 +1436,7 @@
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 100%;
 		flex: 0 0 100%;
+		max-width: 100%;
 	}
 
 	.box-md-offset-12 {
@@ -1429,8 +1467,8 @@
 
 	.box-md-show-inline-flex {
 		display: -webkit-inline-box;
-	  display: -webkit-inline-flex;
-	  display: -ms-inline-flexbox;
-	  display: inline-flex;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
 	}
 }
