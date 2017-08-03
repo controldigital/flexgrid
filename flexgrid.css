@@ -238,8 +238,8 @@
 
 .box {
 	-webkit-box-flex: 1;
-	-ms-flex: 1 1 0;
-	flex: 1 1 0;
+	-ms-flex: 1;
+	flex: 1;
 }
 
 .box-flex,
@@ -744,8 +744,8 @@
 
 	.box-sm {
 		-webkit-box-flex: 1;
-		-ms-flex: 1 1 0;
-		flex: 1 1 0;
+		-ms-flex: 1;
+		flex: 1;
 	}
 
 	.box-sm-flex,
@@ -1212,8 +1212,8 @@
 
 	.box-md {
 		-webkit-box-flex: 1;
-		-ms-flex: 1 1 0;
-		flex: 1 1 0;
+		-ms-flex: 1;
+		flex: 1;
 	}
 
 	.box-md-flex,
