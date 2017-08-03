@@ -4,7 +4,7 @@ Flexbox based 12-column grid build specially build for Control sites to replace 
 The grid is based on the Bootstrap system, but utilizes much more controls that Flexbox brings.
 
 - Author: Control
-- Version: 1.0
+- Version: 1.1
 - License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
 
 
