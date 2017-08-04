@@ -1,7 +1,7 @@
 /**
  *	Flexgrid.css Fallback
  *	Flebox 12 column grid with flexible layouts fallback support for browsers that don't support Flexbox
- *	Version: 1.1
+ *	Version: 1.2
  *	Author: Control
  *	License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
  */
@@ -24,15 +24,10 @@
 	padding-right: 16px;
 }
 
-.row {
-	display: block;
-  position: relative;
-	margin: 0 -16px;
-}
-
+.row,
 .column {
 	display: block;
-  position: relative;
+	position: relative;
 	margin: 0 -16px;
 }
 
@@ -40,12 +35,14 @@
 .container::after,
 .container-full::before,
 .container-full::after,
-.row::before,
-.row::after,
-.column::before,
-.column::after {
-  display: table;
-  content: "";
+.row::before, .row-sm::before, .row-md::before,
+.row::after, .row-sm::after, .row-md::after,
+.column::before, .column-sm::before, .column-md::before,
+.column::after, .column-sm::after, .column-md::after,
+.column-reverse::before, .column-reverse-sm::before, .column-reverse-md::before,
+.column-reverse::after, .column-reverse-sm::after, .column-reverse-md::after {
+	display: table;
+	content: "";
 	clear: both;
 }
 
@@ -83,22 +80,23 @@
 	display: table-cell;
 }
 
-.direction-row-reverse {
+.row-reverse {
 	direction: rtl;
 }
 
-.direction-row-reverse [class^="box"] {
+.row-reverse [class^="box"] {
 	direction: ltr;
 }
 
 .column [class=^"box"],
-.direction-column [class^="box"],
-.direction-column-reverse [class^="box"] {
+.column-reverse [class^="box"], {
 	display: block;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.direction-column-reverse,
-.direction-column-reverse [class^="box"] {
+.column-reverse,
+.column-reverse [class^="box"] {
 	-webkit-transform: scaleY(-1);
 	-ms-transform: scaleY(-1);
 	transform: scaleY(-1);
@@ -203,28 +201,9 @@
 	display: table-cell;
 }
 
-.direction-column [class^="box"],
-.direction-column-reverse [class^="box"] {
-	padding-top: 16px;
-	padding-bottom: 16px;
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .gutterless [class^="box"] {
 	padding-left: 0;
 	padding-right: 0;
-}
-
-.gutterless[class*="direction-column"] [class^="box"] {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.gutterless-sm[class*="direction-column"] [class^="box"],
-.gutterless-md[class*="direction-column"] [class^="box"] {
-	padding-top: 16px;
-	padding-bottom: 16px;
 }
 
 .box,
@@ -408,6 +387,13 @@
 /* TODO: Update all media query properties with the fixed fallbacks */
 @media all and (min-width: 768px) {
 
+	.row-sm,
+	.column-sm {
+		display: block;
+		position: relative;
+		margin: 0 -16px;
+	}
+
 	.wrap-sm {
 		display: table;
 	}
@@ -435,22 +421,23 @@
 		display: table-cell;
 	}
 
-	.direction-row-reverse-sm {
+	.row-reverse-sm {
 		direction: rtl;
 	}
 
-	.direction-row-reverse-sm [class^="box"] {
+	.row-reverse-sm [class^="box"] {
 		direction: ltr;
 	}
 
-	.column [class=^"box"],
-	.direction-column-sm [class^="box"],
-	.direction-column-reverse-sm [class^="box"] {
+	.column-sm [class^="box"],
+	.column-reverse-sm [class^="box"] {
 		display: block;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
-	.direction-column-reverse-sm,
-	.direction-column-reverse-sm [class^="box"] {
+	.column-reverse-sm,
+	.column-reverse-sm [class^="box"] {
 		-webkit-transform: scaleY(-1);
 		-ms-transform: scaleY(-1);
 		transform: scaleY(-1);
@@ -555,22 +542,9 @@
 		display: table-cell;
 	}
 
-	.direction-column-sm [class^="box"],
-	.direction-column-reverse-sm [class^="box"] {
-		padding-top: 16px;
-		padding-bottom: 16px;
-		padding-left: 0;
-		padding-right: 0;
-	}
-
 	.gutterless-sm [class^="box"] {
 		padding-left: 0;
 		padding-right: 0;
-	}
-
-	.gutterless-sm[class*="direction-column"] [class^="box"] {
-		padding-top: 0;
-		padding-bottom: 0;
 	}
 
 	.box-sm,
@@ -750,6 +724,13 @@
 
 @media all and (min-width: 62em) {
 
+	.row-md,
+	.column-md {
+		display: block;
+		position: relative;
+		margin: 0 -16px;
+	}
+
 	.wrap-md {
 		display: table;
 	}
@@ -777,22 +758,23 @@
 		display: table-cell;
 	}
 
-	.direction-row-reverse-md {
+	.row-reverse-md {
 		direction: rtl;
 	}
 
-	.direction-row-reverse-md [class^="box"] {
+	.row-reverse-md [class^="box"] {
 		direction: ltr;
 	}
 
-	.column [class=^"box"],
-	.direction-column-md [class^="box"],
-	.direction-column-reverse-md [class^="box"] {
+	.column-md [class^="box"],
+	.column-reverse-md [class^="box"] {
 		display: block;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
-	.direction-column-reverse-md,
-	.direction-column-reverse-md [class^="box"] {
+	.column-reverse-md,
+	.column-reverse-md [class^="box"] {
 		-webkit-transform: scaleY(-1);
 		-ms-transform: scaleY(-1);
 		transform: scaleY(-1);
@@ -897,22 +879,9 @@
 		display: table-cell;
 	}
 
-	.direction-column-md [class^="box"],
-	.direction-column-reverse-md [class^="box"] {
-		padding-top: 16px;
-		padding-bottom: 16px;
-		padding-left: 0;
-		padding-right: 0;
-	}
-
 	.gutterless-md [class^="box"] {
 		padding-left: 0;
 		padding-right: 0;
-	}
-
-	.gutterless-md[class*="direction-column"] [class^="box"] {
-		padding-top: 0;
-		padding-bottom: 0;
 	}
 
 	.box-md,
