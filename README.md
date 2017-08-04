@@ -4,7 +4,7 @@ Flexbox based 12-column grid build specially build for Control sites to replace 
 The grid is based on the Bootstrap system, but utilizes much more controls that Flexbox brings.
 
 - Author: Control
-- Version: 1.1
+- Version: 1.2
 - License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
 
 
@@ -41,6 +41,19 @@ Columns are the same as rows but vertical. They can be set instead of `.row` wit
   ...
 </div>
 ```
+
+### Creating rows and columns, and modifying them
+The rows have some standard properties. They wrap automatically and have a horizontal direction by default. There are some classes to overwrite this.
+
+| 0px and above             | 768px and above              | 992px and above              | State            |
+| ------------------------- | ---------------------------- | ---------------------------- | ---------------- |
+| .row                      | .row-sm                      | .row-md                      | Row              |
+| .row-reverse              | .row-reverse-sm              | .row-reverse-md              | Row Reversed     |
+| .column                   | .column-sm                   | .column-md                   | Column           |
+| .column-reverse           | .column-reverse-sm           | .column-reverse-md           | Column Reversed  |
+| .wrap                     | .wrap-sm                     | .wrap-md                     | Wrap             |
+| .wrap-reverse             | .wrap-reverse-sm             | .wrap-reverse-md             | Wrap Reverse     |
+| .nowrap                   | .nowrap-sm                   | .nowrap-md                   | No Wrap          |
 
 ### Aligning within rows
 Because `.row` is a Flexbox container it is capable of aligning its children. The default alignment value of a Flexbox container is `align-items: stretch`.
@@ -81,33 +94,27 @@ The classes below utilize the Flebox property `justify-content` which places the
 | .justify-between     | .justify-between-sm.    | .justify-between-md     | Between    | Cross  |
 
 
-
-### Modifying rows
-The rows have some standard properties. They wrap automatically and have a horizontal direction by default. There are some classes to overwrite this.
-
-| 0px and above             | 768px and above              | 992px and above              | State            |
-| ------------------------- | ---------------------------- | ---------------------------- | ---------------- |
-| .wrap                     | .wrap-sm                     | .wrap-md                     | Wrap             |
-| .wrap-reverse             | .wrap-reverse-sm             | .wrap-reverse-md             | Wrap Reverse     |
-| .nowrap                   | .nowrap-sm                   | .nowrap-md                   | No Wrap          |
-| .direction-row            | .direction-row-sm            | .direction-row-md            | Row              |
-| .direction-row-reverse    | .direction-row-reverse-sm    | .direction-row-reverse-md    | Row Reversed     |
-| .direction-column         | .direction-column-sm         | .direction-column-md         | Column           |
-| .direction-column-reverse | .direction-column-reverse-sm | .direction-column-reverse-md | Column Reversed  |
-
-
 ## Box
 The boxes are the classes that are placed inside a row which give you the options to divide the content in boxes with a flexible or a fixed size.
 
 ### Flexible boxes
-| 0px and above   | 768px and above | 992px and above | Size                                                      |
-| --------------- | --------------- | --------------- | --------------------------------------------------------  |
-| .box            | .box-sm.        | .box-md         | All boxes are equal of size                               |
-| .box-flex       | .box-sm-flex    | .box-md-flex    | Fills the space left in a row                             |
-| .box-flex-1     | .box-sm-flex-1  | .box-md-flex-1  | Fills the space left in a row (1/x) (same as `.box-flex`) |
-| .box-flex-2     | .box-sm-flex-2  | .box-md-flex-2  | Fills the space left in a row (2/x)                       |
-| .box-flex-3     | .box-sm-flex-3  | .box-md-flex-3  | Fills the space left in a row (3/x)                       |
-| .box-static     | .box-sm-static  | .box-md-static  | Size of own content                                       |
+| 0px and above   | 768px and above  | 992px and above | Size                                                      |
+| --------------- | ---------------  | --------------- | --------------------------------------------------------  |
+| .box            | .box-sm.         | .box-md         | All boxes are equal of size                               |
+| .box-flex       | .box-sm-flex     | .box-md-flex    | Fills the space left in a row                             |
+| .box-flex-1     | .box-sm-flex-1   | .box-md-flex-1  | Fills the space left in a row (1/x) (same as `.box-flex`) |
+| .box-flex-2     | .box-sm-flex-2   | .box-md-flex-2  | Fills the space left in a row (2/x)                       |
+| .box-flex-3     | .box-sm-flex-3   | .box-md-flex-3  | Fills the space left in a row (3/x)                       |
+| .box-flex-4     | .box-sm-flex-4   | .box-md-flex-4  | Fills the space left in a row (4/x)                       |
+| .box-flex-5     | .box-sm-flex-5   | .box-md-flex-5  | Fills the space left in a row (5/x)                       |
+| .box-flex-6     | .box-sm-flex-6   | .box-md-flex-6  | Fills the space left in a row (6/x)                       |
+| .box-flex-7     | .box-sm-flex-7   | .box-md-flex-7  | Fills the space left in a row (7/x)                       |
+| .box-flex-8     | .box-sm-flex-8   | .box-md-flex-8  | Fills the space left in a row (8/x)                       |
+| .box-flex-9     | .box-sm-flex-9   | .box-md-flex-9  | Fills the space left in a row (9/x)                       |
+| .box-flex-10    | .box-sm-flex-10  | .box-md-flex-10 | Fills the space left in a row (10/x)                      |
+| .box-flex-11    | .box-sm-flex-11  | .box-md-flex-11 | Fills the space left in a row (11/x)                      |
+| .box-flex-12    | .box-sm-flex-12  | .box-md-flex-12 | Fills the space left in a row (12/x)                      |
+| .box-static     | .box-sm-static   | .box-md-static  | Size of own content                                       |
 
 **Example:**
 
