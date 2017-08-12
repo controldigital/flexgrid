@@ -4,7 +4,7 @@ Flexbox based 12-column grid build specially build for Control sites to replace 
 The grid is based on the Bootstrap system, but utilizes much more controls that Flexbox brings.
 
 - Author: Control
-- Version: 1.2
+- Version: 1.3
 - License: Licensed under the MIT/X11 License (http://opensource.org/licenses/MIT)
 
 
@@ -87,11 +87,12 @@ The classes below utilize the Flebox property `justify-content` which places the
 
 | 0px and above        | 768px and above         | 992px and above         | Alignment  | Axis   |
 | -------------------- | ----------------------- | ----------------------- | ---------- | ------ |
-| .justify-start       | .justify-start-sm.      | .justify-start-md       | Start      | Cross  |
-| .justify-end         | .justify-end-sm.        | .justify-end-md         | End        | Cross  |
-| .justify-center      | .justify-center-sm.     | .justify-center-md      | Center     | Cross  |
-| .justify-around      | .justify-around-sm.     | .justify-around-md      | Around     | Cross  |
-| .justify-between     | .justify-between-sm.    | .justify-between-md     | Between    | Cross  |
+| .justify-start       | .justify-start-sm       | .justify-start-md       | Start      | Cross  |
+| .justify-end         | .justify-end-sm         | .justify-end-md         | End        | Cross  |
+| .justify-center      | .justify-center-sm      | .justify-center-md      | Center     | Cross  |
+| .justify-around      | .justify-around-sm      | .justify-around-md      | Around     | Cross  |
+| .justify-between     | .justify-between-sm     | .justify-between-md     | Between    | Cross  |
+| .justify-evenly      | .justify-evenly-sm      | .justify-evenly-md      | Evenly     | Cross  |
 
 
 ## Box
@@ -209,6 +210,7 @@ The aligning style of the row can be overruled per Box. This is done with the `a
 | .box-to-right        | .box-sm-to-right        | .box-md-to-right        | Right      | Cross |
 | .box-to-bottom       | .box-sm-to-bottom       | .box-md-to-bottom       | Bottom     | Cross |
 | .box-to-left         | .box-sm-to-left         | .box-md-to-left         | Left       | Cross |
+| .box-to-center       | .box-sm-to-center       | .box-md-to-center       | Center     | Cross |
 
 ### Box Order
 Flexbox has the cool capability to reorder children of the container. This is done through the `order` property.
