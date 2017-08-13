@@ -201,11 +201,11 @@ The aligning style of the row can be overruled per Box. This is done with the `a
 
 | 0px and above        | 768px and above         | 992px and above         | Alignment  | Axis  |
 | -------------------- | ----------------------- | ----------------------- | ---------- | ----- |
-| .box-align-start     | .box-sm-align-start     | .box-md-align-start     | Start      | Main  |
-| .box-align-end       | .box-sm-align-end       | .box-md-align-end       | End        | Main  |
-| .box-align-center    | .box-sm-align-center    | .box-md-align-center    | Center     | Main  |
-| .box-align-baseline  | .box-sm-align-baseline  | .box-md-align-baseline  | Baseline   | Main  |
-| .box-align-stretch   | .box-sm-align-stretch   | .box-md-align-stretch   | Stretch    | Main  |
+| .box-start           | .box-sm-start           | .box-md-start           | Start      | Main  |
+| .box-end             | .box-sm-end             | .box-md-end             | End        | Main  |
+| .box-center          | .box-sm-center          | .box-md-center          | Center     | Main  |
+| .box-baseline        | .box-sm-baseline        | .box-md-baseline        | Baseline   | Main  |
+| .box-stretch         | .box-sm-stretch         | .box-md-stretch         | Stretch    | Main  |
 | .box-to-top          | .box-sm-to-top          | .box-md-to-top          | Top        | Cross |
 | .box-to-right        | .box-sm-to-right        | .box-md-to-right        | Right      | Cross |
 | .box-to-bottom       | .box-sm-to-bottom       | .box-md-to-bottom       | Bottom     | Cross |
