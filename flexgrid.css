@@ -201,7 +201,7 @@
 }
 
 .row > [class^="box"] {
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 }
 
 .row-reverse-sm > [class^="box"], .row-reverse-md > [class^="box"] {
@@ -209,7 +209,7 @@
 }
 
 .row-reverse > [class^="box"] {
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 .gutterless > [class^="box"] {
@@ -730,10 +730,10 @@
 	}
 
 	.row-sm > [class^="box"] {
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 	}
 	.row-reverse-sm > [class^="box"] {
-		margin-top: 1em;
+		margin-top: 2em;
 	}
 
 	.gutterless-sm > [class^="box"] {
@@ -1240,11 +1240,11 @@
 	}
 
 	.row-md > [class^="box"] {
-		margin-bottom: 1em;
+		margin-bottom: 2em;
 	}
 
 	.row-reverse-md > [class^="box"] {
-		margin-top: 1em;
+		margin-top: 2em;
 	}
 
 	.gutterless-md > [class^="box"] {
